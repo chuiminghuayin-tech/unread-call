@@ -1,0 +1,32 @@
+/* v18: scenery behind conversation; only timed events may cover it. */
+#fx{z-index:0;overflow:hidden;isolation:isolate}
+#fx>*{z-index:0!important}
+#intro,#game,#ending{position:relative;z-index:1}
+.game{isolation:isolate;background-color:transparent!important}
+.game:before{z-index:0;opacity:.22!important;filter:none!important}
+.game>.topbar,.game>.composer{z-index:3}
+.game>.messages{z-index:2;min-height:0;overscroll-behavior:contain}
+/* Use the generated fissure on the scenery plane, never over text. */
+.game:after{content:'';position:absolute;inset:0;z-index:0;pointer-events:none;background:url('assets/blood_crack.webp') center/cover no-repeat;mix-blend-mode:screen;opacity:0;transition:opacity 1.8s ease}
+.phase-dark .game:after{opacity:.14}
+.phase-horror .game:after{opacity:.32}
+.fx-cracks{display:none!important}
+body.bleeding:before,body.bleeding:after{content:none!important;display:none!important}
+.phase-horror .messages{animation:none!important;filter:none!important;background:linear-gradient(90deg,#100309e8,#09050de0 45%,#18050ce8)!important}
+.phase-dark .messages{background:linear-gradient(90deg,#0d0813df,#0b0710c9)!important}
+.messages:before,.messages:after{display:none!important}
+.message{flex-shrink:0}
+.message-bubble{overflow-wrap:anywhere}
+.phase-horror .message.other .message-bubble{background:#210911f5;color:#ffc6cd;border-color:#9d4054;line-height:1.8;box-shadow:inset 0 1px #ffffff0c,0 5px 16px #0005}
+.message.fractured .message-bubble{animation:fracturedType .12s steps(2) 5;clip-path:none}
+.message.fractured:nth-child(3n) .message-bubble{filter:none;transform:none}
+.message.melting .message-bubble{animation-iteration-count:2}
+.choice-btn{min-height:46px;touch-action:manipulation}
+.head-tools button{min-width:38px;min-height:42px}
+.composer{max-height:48%;overflow-y:auto;overscroll-behavior:contain}
+.sticker-dock{overflow:hidden;height:64px;margin-top:0}
+.sticker-art{height:96px;width:90px;left:calc(50% - 45px)}
+.ending{overflow-y:auto;overscroll-behavior:contain}
+.ending>*{flex-shrink:0}
+.ending .text-btn{flex:0 0 auto;min-height:36px}
+@media(max-height:700px){.sticker-dock{height:42px}.sticker-art{height:70px}.messages{padding-top:16px}.ending-avatar{width:88px;height:88px}.ending{padding:14px 24px}}

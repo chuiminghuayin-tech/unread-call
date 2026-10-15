@@ -1,0 +1,12 @@
+/* Whole chibi stays inside its own measured slot. Decorations are PNG assets. */
+.sticker-dock{height:132px!important;min-height:132px;flex:none;overflow:visible!important;margin:0 0 9px!important;padding:4px 76px;background-size:cover!important}
+.sticker-art{position:relative!important;inset:auto!important;display:block;width:110px!important;height:124px!important;max-height:100%;object-fit:contain!important;object-position:center!important;flex:none;z-index:3}
+.sticker-ornament{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.sticker-caption{right:8px;bottom:6px;max-width:74px;text-align:right;line-height:1.6}
+.composer{max-height:55%;padding-top:6px;overflow-y:auto}
+.message.other{position:relative;padding-bottom:7px}
+.bear-seal{position:absolute;right:-8px;bottom:-10px;width:43px;height:51px;object-fit:contain;pointer-events:none;z-index:3;filter:drop-shadow(0 2px 3px #0007)}
+.message.bear-adorned .message-bubble{padding-right:35px;min-width:100px}
+.phase-dark .bear-seal{width:48px;height:57px;bottom:-13px}
+.phase-horror .bear-seal{width:51px;height:61px;bottom:-15px}
+@media(max-height:700px){.sticker-dock{height:108px!important;min-height:108px}.sticker-art{height:100px!important;width:90px!important}.composer{max-height:57%}.bear-seal{width:35px;height:43px}}

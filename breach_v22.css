@@ -1,0 +1,24 @@
+/* Breach V22: artwork is always PNG; these rules only composite it. */
+.bv22-root,.bv22-root *{pointer-events:none!important;box-sizing:border-box}
+.bv22-root{position:fixed;inset:0;z-index:2147483000;overflow:hidden;isolation:isolate;contain:layout style paint;user-select:none;-webkit-user-select:none;background:transparent}
+.bv22-root .bv22-veil,.bv22-root .bv22-black,.bv22-root .bv22-portal{position:absolute;inset:0;opacity:0}
+.bv22-root .bv22-veil{background:radial-gradient(ellipse at var(--cx) var(--cy),transparent 5%,rgba(9,0,5,.24) 48%,rgba(0,0,0,.9) 100%)}
+.bv22-root .bv22-black{background:#020103;z-index:12}
+.bv22-root .bv22-portal{overflow:hidden;z-index:5;will-change:clip-path,opacity;filter:drop-shadow(0 0 13px #260008)}
+.bv22-root .bv22-art{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;transform-origin:50% 50%;will-change:transform,opacity;max-width:none!important;border:0!important}
+.bv22-root .bv22-wound{position:absolute;overflow:hidden;z-index:3;will-change:clip-path,transform,opacity;filter:drop-shadow(0 1px 3px #800c21)}
+.bv22-root .bv22-wound .bv22-art{object-position:50% 48%;filter:saturate(1.17) contrast(1.14)}
+.bv22-root .bv22-blood{position:absolute;overflow:hidden;z-index:4;opacity:0;transform-origin:50% 0%;will-change:transform,opacity;mask-image:linear-gradient(to bottom,#000 0%,#000 60%,transparent 100%);-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 60%,transparent 100%)}
+.bv22-root .bv22-blood .bv22-art{height:200%;object-fit:cover;filter:saturate(1.55) brightness(.72);mask-image:linear-gradient(to right,transparent,#000 28%,#000 65%,transparent);-webkit-mask-image:linear-gradient(to right,transparent,#000 28%,#000 65%,transparent)}
+.bv22-root .bv22-eye{position:absolute;z-index:6;overflow:hidden;opacity:0;will-change:transform,opacity,clip-path;mask-image:radial-gradient(ellipse,black 42%,rgba(0,0,0,.9) 60%,transparent 73%);-webkit-mask-image:radial-gradient(ellipse,black 42%,rgba(0,0,0,.9) 60%,transparent 73%)}
+.bv22-root .bv22-eye .bv22-art{filter:contrast(1.12) saturate(.88)}
+.bv22-root .bv22-shard{position:absolute;z-index:7;overflow:hidden;opacity:0;will-change:transform,opacity;filter:drop-shadow(0 5px 9px #000)}
+.bv22-root .bv22-portal.bv22-soft{mask-image:radial-gradient(ellipse at 50% 52%,black 45%,rgba(0,0,0,.97) 66%,transparent 94%);-webkit-mask-image:radial-gradient(ellipse at 50% 52%,black 45%,rgba(0,0,0,.97) 66%,transparent 94%)}
+@media(prefers-reduced-motion:reduce){.bv22-root .bv22-art,.bv22-root .bv22-shard{filter:brightness(.7)}}
+
+/* V22 depth: painted edges feather into darkness instead of forming a card. */
+.bv22-root .bv22-portal{mix-blend-mode:screen;filter:drop-shadow(0 0 10px rgba(64,0,18,.72)) drop-shadow(0 9px 18px rgba(0,0,0,.8));}
+.bv22-root .bv22-portal .bv22-art{mix-blend-mode:screen;mask-image:radial-gradient(ellipse at 50% 52%,#000 34%,rgba(0,0,0,.92) 62%,transparent 94%);-webkit-mask-image:radial-gradient(ellipse at 50% 52%,#000 34%,rgba(0,0,0,.92) 62%,transparent 94%);}
+.bv22-root .bv22-wound{filter:drop-shadow(0 1px 2px rgba(0,0,0,.85)) drop-shadow(0 0 5px rgba(118,5,30,.55));}
+.bv22-root .bv22-shard{mix-blend-mode:screen;mask-image:linear-gradient(135deg,transparent 0%,#000 18%,#000 78%,transparent 100%);-webkit-mask-image:linear-gradient(135deg,transparent 0%,#000 18%,#000 78%,transparent 100%);}
+.bv22-root .bv22-eye{mix-blend-mode:screen;}

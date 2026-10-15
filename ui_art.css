@@ -1,0 +1,26 @@
+/* Generated visual plate is the primary UI surface; CSS only positions and animates it. */
+.cover-bg-art{opacity:.62!important;filter:brightness(.48) saturate(.82)!important;mix-blend-mode:screen!important;transform:scale(1.06);animation:uiPlateDrift 18s ease-in-out infinite alternate}
+.game{background-color:#05070c!important;background-image:url('assets/ui_master_bg.webp')!important;background-size:cover!important;background-position:center!important}
+.game:before{content:'';position:absolute;inset:0;pointer-events:none;background:url('assets/ui_master_bg.webp') center/cover no-repeat;opacity:.26;mix-blend-mode:screen;animation:uiPlatePulse 9s ease-in-out infinite;z-index:0}
+.game>*{position:relative;z-index:1}
+.topbar{background:rgba(5,8,14,.78)!important;border-bottom:1px solid #c8414b!important;box-shadow:0 4px 24px #000b,0 1px 0 #f0c07933 inset!important}
+.status{background:rgba(174,24,47,.13);font-family:monospace;color:#d17b7e!important;text-shadow:0 0 8px #f22}
+.chat-head{background:linear-gradient(90deg,#07101ae6,#280d18a6,#07101ae6);position:relative}
+.chat-head:after{content:'SYS // SOUL FREQUENCY // CONNECTED';position:absolute;right:14px;bottom:3px;color:#bd3b4e;font:8px monospace;letter-spacing:.12em;opacity:.72}
+.messages{background:linear-gradient(90deg,#03050acc,#07101a33 28%,#1a071033 72%,#03050acc);position:relative}
+.messages:after{content:'REC  ●  00:00:00    //    SIGNAL MONITOR    //    HAZARD: SS-CLASS';position:absolute;left:14px;top:6px;color:#b23b4c;font:8px monospace;letter-spacing:.1em;opacity:.7;pointer-events:none}
+.composer{background:rgba(3,6,12,.9)!important;border-top:1px solid #c13d4c!important;box-shadow:0 -8px 30px #000b,0 -1px 0 #e1b87522 inset!important}
+.choice-btn{background:linear-gradient(90deg,#130b16e8,#1b101bd9)!important;border-color:#8f3448!important;box-shadow:inset 0 1px #dcb67322,0 4px 14px #0008!important}
+.choice-btn:before{content:'[  ';color:#d35a65;font-family:monospace}.choice-btn:after{content:'  ]';color:#d35a65;font-family:monospace}
+.sticker-dock{background:url('assets/ui_master_bg.webp') center/cover!important;border-color:#c34a55!important;box-shadow:inset 0 0 30px #000b,0 5px 22px #000a!important}
+.cover{background-color:#02040a!important;background-image:url('assets/ui_master_bg.webp')!important;background-size:cover!important;background-position:center!important}
+.cover:after{content:'> INIT: ABYSS_PROTOCOL\A> SCANNING SOUL FREQ.\A> DESIRE OVERRIDE: DETECTED';white-space:pre;position:absolute;left:12px;bottom:13px;color:#bd3e51;font:8px monospace;line-height:1.7;letter-spacing:.1em;opacity:.72;pointer-events:none}
+.cover-frame{background:rgba(3,7,13,.78)!important;border-color:#c34851!important;box-shadow:0 0 0 1px #f1ca7a22,0 0 0 5px #070b12aa,0 20px 80px #000!important}
+.cover-frame:after{content:'SYS // CORRUPTED DATA // KEEP OUT';display:block;position:absolute;right:14px;top:14px;color:#bc3d51;font:8px monospace;letter-spacing:.1em;transform:rotate(90deg);transform-origin:right top;opacity:.8}
+.cover-title{text-shadow:0 0 10px #f02c4c,0 0 32px #f02c4c88!important}
+.phase-horror .game:before{opacity:.58;filter:hue-rotate(315deg) contrast(1.4);animation:uiPlateGlitch 2.4s steps(2) infinite}
+.phase-horror .messages{background:linear-gradient(90deg,#190208e8,#050106cc 40%,#2c0711d9)!important}
+.phase-horror .topbar{box-shadow:0 0 26px #d1193f66,0 4px 0 #d1193f33!important}
+@keyframes uiPlateDrift{to{transform:scale(1.11) translate3d(-1%,1%,0);filter:brightness(.52) saturate(1)}}
+@keyframes uiPlatePulse{50%{opacity:.38;transform:translate3d(.5%,0,0) scale(1.015)}}
+@keyframes uiPlateGlitch{0%,89%{transform:none}90%{transform:translate(2px,-1px) skewX(1deg)}93%{transform:translate(-2px,1px) skewX(-2deg)}96%{transform:none}}

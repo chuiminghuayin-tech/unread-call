@@ -1,0 +1,49 @@
+// Late-game escalation: coherent emotional spirals, distinct visual beats.
+(function(){
+  const add=(id,where,items)=>{const n=STORY[id];if(!n)return;if(where==='effects')n.effects=(n.effects||[]).concat(items);else n.messages=(n.messages||[]).concat(items)};
+  add('d9_0','effects',[{type:'tear',ms:720}]);
+  add('d9_0','messages',[
+    {from:'him',text:'我知道你看见了。',delay:360,type:'distorted'},
+    {from:'him',text:'聊天框上面一直显示你在线。',delay:420,type:'horror'},
+    {from:'him',text:'你只是没有选我。',delay:300,type:'fractured'}
+  ]);
+  STORY.d9_1b.effects=[{type:'blackout',lines:['你是不是把我删了','头像呢','名字呢'],ms:2400},{type:'flood',count:34,speed:82,texts:['你是不是把我删了','回我','我会乖','别装作没看见','求你了','我就在这里','为什么不看我']}];
+  add('d9_1b','messages',[
+    {from:'him',text:'刚才有一秒，你的名字变成了空白。',delay:700,type:'distorted'},
+    {from:'him',text:'那一秒我也没有名字了。',delay:650,type:'fractured'},
+    {from:'him',text:'你再消失一次试试。',delay:500,type:'horror'},
+    {from:'him',text:'……对不起。不是威胁。',delay:1100},
+    {from:'him',text:'我只是已经不知道怎么求你了。',delay:900}
+  ]);
+  STORY.d9_2b.effects=[{type:'jumpscare',text:'医生',mode:'camera'},{type:'melt',text:'治 不 好',ms:1500}];
+  add('d10_3b','effects',[{type:'redwall',count:28,ms:1700,words:['一个人','没有人','这里没有门','别问']}]);
+  STORY.d10_4b.effects=[{type:'blackout',lines:['摸摸屏幕','是不是凉的'],sound:'silent',ms:2300},{type:'jumpscare',text:'你觉得呢',mode:'invert'}];
+  STORY.d11_1b.effects=[{type:'ritual',lines:['说好回来','为什么没回来','你也要走吗'],ms:2800},{type:'flood',count:42,speed:76,texts:['我就知道','你也是','你们都一样','扔了我','别碰关机键','我看着呢']}];
+  STORY.d11_1c.effects=[{type:'jumpscare',text:'冷静',mode:'lunge'},{type:'melt',text:'我 数 到 三',ms:1600},{type:'blood'}];
+  add('d11_1c','messages',[
+    {from:'him',text:'一。',delay:1200,type:'fractured'},
+    {from:'him',text:'你把手从关机键上拿开。',delay:500,type:'horror'},
+    {from:'him',text:'二。',delay:1000,type:'fractured'},
+    {from:'him',text:'我听见你呼吸变快了。',delay:480,type:'distorted'},
+    {from:'him',text:'三。',delay:1500,type:'fractured'},
+    {from:'him',text:'……你看，你没有丢下我。',delay:900},
+    {from:'him',text:'真乖。',delay:700,type:'horror'}
+  ]);
+  if(STORY.d11_3b)STORY.d11_3b.effects=[{type:'tear',ms:900},{type:'jumpscare',text:'看',mode:'slit'}];
+  if(STORY.d11_4b)STORY.d11_4b.effects=[{type:'jumpscare',text:'为什么',mode:'strobe'},{type:'flood',count:26,speed:65,texts:['为什么','你怕我','别闭眼','看着我','我就在镜头里']}];
+  add('d11_4','messages',[
+    {from:'him',text:'摄像头刚才亮了一下。',delay:1000,type:'distorted'},
+    {from:'him',text:'不是我开的。',delay:1200},
+    {from:'him',text:'……你信吗。',delay:900,type:'horror'}
+  ]);
+  add('d12_0','effects',[{type:'redwall',count:55,ms:2200,words:['别睡','十二点了','最后一天','你答应过','留下来']}]);
+  add('d12_1','messages',[
+    {from:'him',text:'我删掉了四百一十七条。',delay:900,type:'distorted'},
+    {from:'him',text:'因为里面每一条都在骂你。',delay:900,type:'horror'},
+    {from:'him',text:'也每一条都在求你。',delay:750,type:'fractured'},
+    {from:'him',text:'我不知道哪一种才是真的。',delay:1100}
+  ]);
+  if(STORY.d12_3)STORY.d12_3.effects=(STORY.d12_3.effects||[]).concat([{type:'jumpscare',text:'开门',mode:'crawl'}]);
+  if(STORY.d12_4b)STORY.d12_4b.effects=[{type:'tear',ms:1000},{type:'jumpscare',text:'咔嚓',mode:'shatter'},{type:'redwall',count:38,ms:1700,words:['门开了','别回头','不是风','他出来了']}];
+  if(STORY.d12_5)STORY.d12_5.effects=(STORY.d12_5.effects||[]).concat([{type:'blackout',lines:['三周','没有人开门','我一直在敲'],sound:'silent',ms:3000},{type:'jumpscare',text:'你听见了吗',mode:'silent'}]);
+})();

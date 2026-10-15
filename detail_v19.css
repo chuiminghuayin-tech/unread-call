@@ -1,0 +1,20 @@
+/* Keep v18 background ordering, restore the requested unstable typography. */
+.message.fractured .message-bubble{animation:fracturedType .12s steps(2) infinite;filter:contrast(1.25);clip-path:initial}
+.message.fractured:nth-child(3n) .message-bubble{filter:blur(.65px) contrast(1.8);transform:skewX(-5deg)}
+.message.melting .message-bubble{animation-iteration-count:infinite}
+.message.other{align-items:flex-start;max-width:94%;padding-left:3px;overflow:visible}
+.msg-avatar{width:38px;height:48px;flex:0 0 38px;object-fit:contain;object-position:center center;border-radius:8px;background:#100d17;border:1px solid #aa806454;box-shadow:0 0 0 2px #09060e,0 3px 10px #0008;margin-top:2px}
+.avatar-wrap{width:49px;height:54px;border-radius:10px;flex-shrink:0}
+.avatar-wrap img{object-fit:contain;object-position:center;border-radius:7px}
+.message-bubble{min-width:0;max-width:100%;position:relative}
+.topbar{border-image:linear-gradient(90deg,#b28b54,#471a30,#d1ac6c,#471a30,#b28b54) 1!important}
+.composer{border-image:linear-gradient(90deg,#441328,#c69b62,#441328) 1!important}
+.message.user .message-bubble{box-shadow:inset 0 1px #f8e1b45c,0 4px 15px #0006}
+.phase-dark .message.other .message-bubble{border-color:#ab825157;box-shadow:inset 0 1px #ebd09a17,0 5px 18px #0008}
+.choice-btn{position:relative;border-radius:3px 10px 3px 10px;outline:1px solid #c9a66815;outline-offset:2px;transition:background .2s,box-shadow .2s}
+.choice-btn:active{box-shadow:inset 0 0 22px #c98c492e!important}
+.bubble-breach{position:fixed;inset:0;z-index:144;pointer-events:none}
+.breach-origin{animation:breachBulge 3.1s ease-in-out!important;transform-origin:center;box-shadow:0 0 0 1px #ab758c,0 0 28px #700b36!important}
+.breach-neighbors .message:not(:last-child){animation:neighborDisplace 2.8s ease-in-out}
+@keyframes breachBulge{0%,100%{transform:none}20%{transform:perspective(250px) rotateX(-12deg) scale(1.06);filter:brightness(.6)}46%{transform:perspective(200px) rotateY(9deg) scale(1.13);filter:brightness(1.4)}65%{transform:translate(3px,4px) skew(4deg,-2deg)}82%{transform:translate(-3px,1px) skew(-3deg)}}
+@keyframes neighborDisplace{25%{transform:translateY(-3px)}55%{transform:translate(4px,-7px) rotate(-.6deg)}80%{transform:translate(-2px,2px)}}

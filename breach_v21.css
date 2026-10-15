@@ -1,0 +1,17 @@
+/* Breach V21: artwork is always PNG; these rules only composite it. */
+.bv21-root,.bv21-root *{pointer-events:none!important;box-sizing:border-box}
+.bv21-root{position:fixed;inset:0;z-index:2147483000;overflow:hidden;isolation:isolate;contain:layout style paint;user-select:none;-webkit-user-select:none;background:transparent}
+.bv21-root .bv21-veil,.bv21-root .bv21-black,.bv21-root .bv21-portal{position:absolute;inset:0;opacity:0}
+.bv21-root .bv21-veil{background:radial-gradient(ellipse at var(--cx) var(--cy),transparent 5%,rgba(9,0,5,.24) 48%,rgba(0,0,0,.9) 100%)}
+.bv21-root .bv21-black{background:#020103;z-index:12}
+.bv21-root .bv21-portal{overflow:hidden;z-index:5;will-change:clip-path,opacity;filter:drop-shadow(0 0 13px #260008)}
+.bv21-root .bv21-art{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;transform-origin:50% 50%;will-change:transform,opacity;max-width:none!important;border:0!important}
+.bv21-root .bv21-wound{position:absolute;overflow:hidden;z-index:3;will-change:clip-path,transform,opacity;filter:drop-shadow(0 1px 3px #800c21)}
+.bv21-root .bv21-wound .bv21-art{object-position:50% 48%;filter:saturate(1.17) contrast(1.14)}
+.bv21-root .bv21-blood{position:absolute;overflow:hidden;z-index:4;opacity:0;transform-origin:50% 0%;will-change:transform,opacity;mask-image:linear-gradient(to bottom,#000 0%,#000 60%,transparent 100%);-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 60%,transparent 100%)}
+.bv21-root .bv21-blood .bv21-art{height:200%;object-fit:cover;filter:saturate(1.55) brightness(.72);mask-image:linear-gradient(to right,transparent,#000 28%,#000 65%,transparent);-webkit-mask-image:linear-gradient(to right,transparent,#000 28%,#000 65%,transparent)}
+.bv21-root .bv21-eye{position:absolute;z-index:6;overflow:hidden;opacity:0;will-change:transform,opacity,clip-path;mask-image:radial-gradient(ellipse,black 42%,rgba(0,0,0,.9) 60%,transparent 73%);-webkit-mask-image:radial-gradient(ellipse,black 42%,rgba(0,0,0,.9) 60%,transparent 73%)}
+.bv21-root .bv21-eye .bv21-art{filter:contrast(1.12) saturate(.88)}
+.bv21-root .bv21-shard{position:absolute;z-index:7;overflow:hidden;opacity:0;will-change:transform,opacity;filter:drop-shadow(0 5px 9px #000)}
+.bv21-root .bv21-portal.bv21-soft{mask-image:radial-gradient(ellipse at 50% 52%,black 45%,rgba(0,0,0,.97) 66%,transparent 94%);-webkit-mask-image:radial-gradient(ellipse at 50% 52%,black 45%,rgba(0,0,0,.97) 66%,transparent 94%)}
+@media(prefers-reduced-motion:reduce){.bv21-root .bv21-art,.bv21-root .bv21-shard{filter:brightness(.7)}}
